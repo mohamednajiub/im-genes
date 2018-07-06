@@ -40,11 +40,12 @@ function addImage() {
 function articleRequest() {
     const articleRequest = new XMLHttpRequest();
     articleRequest.open('GET', `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=2673bdbbdee9493ba01ac2e41ed8d941`);
-    articleRequest.send();
+    
     articleRequest.onload = addArticles;
     articleRequest.onerror = function (err) {
         console.log(err);
     };
+    articleRequest.send();
 }
 // search for an Article in NYT which not using Request header
 function addArticles() {
