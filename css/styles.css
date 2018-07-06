@@ -167,6 +167,9 @@ ul {
 
 
 /* custom  */
+#images{
+    margin-top: 10px
+}
 figure{
     display: inline-flex;
     margin: 0 1%;
